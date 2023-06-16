@@ -22,20 +22,40 @@
   backdrop-filter: blur(40px);
   filter: drop-shadow(0px 4px 16px rgba(16, 16, 16, 0.1))
     drop-shadow(0px 4px 100px rgba(16, 16, 16, 0.1));
+  transform: perspective(1000px) rotateX(var(--rotateX)) rotateY(var(--rotateY));
+  position: relative;
 }
 
 .qr-code {
   background: var(--qr-bg-color);
   border-radius: calc(var(--_border-radius) - 0.625rem);
   padding: calc(var(--_padding) * 4);
+  position: relative;
+  transform: translateZ(-100px);
+}
+/* 
+.qr-code-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: -1rem;
+  border-radius: inherit;
+  background-color: var(--wz-dark);
+  transform: translateZ(-1000px);
+} */
+
+.qr-code-img {
+  height: 14rem;
+  aspect-ratio: 1 / 1;
+  background: var(--qr-code-image);
 }
 
-.qr-code {
+/* .qr-code {
   background: var(--qr-bg-color);
   border-radius: calc(var(--_border-radius) - 0.625rem);
   padding: calc(var(--_padding) * 4);
-  mix-blend-mode: overlay;
-}
+  backdrop-filter: blur(40px);
+  mix-blend-mode: hard-light;
+} */
 
 /* .qr-code svg {
   height: 20rem;
