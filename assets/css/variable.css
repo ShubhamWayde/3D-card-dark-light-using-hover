@@ -1,0 +1,38 @@
+:root {
+  /* default colors */
+  --wz-light: #ffffff;
+  --wz-dark: #101010;
+
+  /* primamry light colors */
+  --background-color: #ebc7e6;
+  --qr-bg-color: #645cbb;
+  --qr-wrapper-bg: rgba(255, 255, 255);
+
+  /* primary background image */
+  --background-image: url(../images/light-bg-img.jpg) center / cover no-repeat;
+
+  /* qr code wrapper background */
+  --qr-w-background-color: var(--wz-light);
+
+  /* text color */
+  --text-primary: var(--wz-dark);
+  --text-secondary: #757575;
+
+  /* line height */
+  --line-height-400: 150%;
+
+  /* font sizes */
+  --font-size-400: 1rem;
+  --font-sze-450: 1.5rem;
+}
+
+root-wz.dark {
+  --qr-bg-color: rgba(235, 199, 230);
+  /* --background-color: #645cbb; */
+  --qr-wrapper-bg: rgba(255, 255, 255, 0.2);
+  --background-image: url(../images/dark-bg-img.jpg) center / cover no-repeat;
+
+  /* text color */
+  --text-primary: var(--wz-light);
+  --text-secondary: #e5e5e5;
+}

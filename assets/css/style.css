@@ -1,0 +1,52 @@
+.qr-code-component {
+  --_border-radius: 1.5rem;
+  --_padding: 1rem;
+  /* width: 100vh; */
+  height: 100vh;
+  /* width: 100dvh; */
+  height: 100dvh;
+  background: var(--background-image);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.qr-code-wrapper {
+  border-radius: var(--_border-radius);
+  display: grid;
+  padding: var(--_padding);
+  place-content: center;
+  justify-items: center;
+  gap: 1.5rem;
+  background: var(--qr-wrapper-bg);
+  backdrop-filter: blur(40px);
+  filter: drop-shadow(0px 4px 16px rgba(16, 16, 16, 0.1))
+    drop-shadow(0px 4px 100px rgba(16, 16, 16, 0.1));
+}
+
+.qr-code {
+  background: var(--qr-bg-color);
+  border-radius: calc(var(--_border-radius) - 0.625rem);
+  padding: calc(var(--_padding) * 4);
+}
+
+.qr-code {
+  background: var(--qr-bg-color);
+  border-radius: calc(var(--_border-radius) - 0.625rem);
+  padding: calc(var(--_padding) * 4);
+  mix-blend-mode: overlay;
+}
+
+/* .qr-code svg {
+  height: 20rem;
+  width: 20rem;
+} */
+
+.qr-code-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: calc(var(--_padding) * 22);
+  padding-block: 1rem;
+  text-wrap: balance; /* only supported in chrome as of now */
+}
