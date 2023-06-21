@@ -1,9 +1,7 @@
 .qr-code-component {
   --_border-radius: 1.5rem;
   --_padding: 1rem;
-  /* width: 100vh; */
   height: 100vh;
-  /* width: 100dvh; */
   height: 100dvh;
   background: var(--background-image);
   display: flex;
@@ -31,36 +29,29 @@
   border-radius: calc(var(--_border-radius) - 0.625rem);
   padding: calc(var(--_padding) * 4);
   position: relative;
-  transform: translateZ(-100px);
+  transform-style: preserve-3d;
+  transform: perspective(40000px) translateZ(-100px);
 }
-/* 
-.qr-code-wrapper::after {
+
+.qr-code::after {
   content: "";
   position: absolute;
-  inset: -1rem;
   border-radius: inherit;
-  background-color: var(--wz-dark);
-  transform: translateZ(-1000px);
-} */
+}
+
+.qr-code::after {
+  inset: -0.5rem;
+  background: var(--qr-bg-color);
+  opacity: 0.4;
+  filter: blur(24px);
+  transform: translateZ(-80px);
+}
 
 .qr-code-img {
   height: 14rem;
   aspect-ratio: 1 / 1;
   background: var(--qr-code-image);
 }
-
-/* .qr-code {
-  background: var(--qr-bg-color);
-  border-radius: calc(var(--_border-radius) - 0.625rem);
-  padding: calc(var(--_padding) * 4);
-  backdrop-filter: blur(40px);
-  mix-blend-mode: hard-light;
-} */
-
-/* .qr-code svg {
-  height: 20rem;
-  width: 20rem;
-} */
 
 .qr-code-text {
   display: flex;
@@ -69,4 +60,24 @@
   max-width: calc(var(--_padding) * 22);
   padding-block: 1rem;
   text-wrap: balance; /* only supported in chrome as of now */
+}
+
+/* foooter css */
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 5rem;
+  margin-inline: auto;
+  backdrop-filter: blur(2.5rem);
+  border-top: 1px solid var(--qr-wrapper-bg);
+}
+
+.attribution {
+  color: var(--qr-bg-color);
+  width: 100%;
+  max-width: 60%;
+  justify-content: space-between;
+  margin-inline: auto;
 }
