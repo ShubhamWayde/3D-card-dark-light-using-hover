@@ -9,8 +9,9 @@
   --qr-wrapper-bg: rgba(255, 255, 255);
 
   /* primary background image */
-  --background-image: url(../images/light-bg-img.jpg) center / cover no-repeat,
-    url(../images/light-bg-img-low-res.jpg) center / cover no-repeat;
+  --background-image-low-res: url(../images/light-bg-img-low-res.png) center /
+    cover no-repeat;
+  --background-image: url(../images/light-bg-img.jpg) center / cover no-repeat;
 
   /* qr code wrapper background */
   --qr-w-background-color: var(--wz-light);
@@ -34,8 +35,11 @@ root-wz.dark {
   --qr-bg-color: rgba(235, 199, 230, 0.8);
   /* --background-color: #645cbb; */
   --qr-wrapper-bg: rgba(255, 255, 255, 0.16);
-  --background-image: url(../images/dark-bg-img.jpg) center / cover no-repeat,
-    url(../images/dark-bg-img-low-res.jpg) center / cover no-repeat;
+
+  /* primary background image */
+  --background-image-low-res: url(../images/dark-bg-img-low-res.png) center /
+    cover no-repeat;
+  --background-image: url(../images/dark-bg-img.jpg) center / cover no-repeat;
 
   /* text color */
   --text-primary: var(--wz-light);
