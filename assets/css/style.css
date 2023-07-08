@@ -48,5 +48,5 @@
   gap: 0.75rem;
   max-width: calc(var(--_padding) * 22);
   padding-block: 1rem;
-  text-wrap: balance; /* only supported in google chrome as of now */
+  text-wrap: balance; /* only supported in chrome as of now */
 }
