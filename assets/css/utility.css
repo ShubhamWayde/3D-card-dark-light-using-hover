@@ -13,6 +13,35 @@ html {
   box-sizing: inherit;
 }
 
+a {
+  text-decoration: none;
+  color: var(--qr-bg-color);
+  position: relative;
+}
+
+a::after {
+  border-radius: 0.5rem;
+  content: "";
+  position: absolute;
+  inset: -0.5rem;
+  top: 1.625rem;
+  background-color: var(--qr-bg-color);
+  z-index: -1;
+  transition: 200ms cubic-bezier(0, 0.8, 0.13, 1);
+}
+
+a:hover::after {
+  top: -0.5rem;
+}
+
+a:hover {
+  color: var(--wz-light);
+}
+
+.m-i-50 {
+  margin-inline: 0.5rem;
+}
+
 h1,
 h2,
 h3,
@@ -44,4 +73,13 @@ p {
   font-size: var(--font-size-400);
   color: var(--text-secondary);
   line-height: var(--line-height-400);
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-flex-ac {
+  display: flex;
+  align-items: center;
 }

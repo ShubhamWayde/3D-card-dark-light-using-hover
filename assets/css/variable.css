@@ -3,16 +3,21 @@
   --wz-light: #ffffff;
   --wz-dark: #101010;
 
-  /* primamry light colors */
+  /* primary light colors */
   --background-color: #ebc7e6;
   --qr-bg-color: #645cbb;
   --qr-wrapper-bg: rgba(255, 255, 255);
 
   /* primary background image */
+  --background-image-low-res: url(../images/light-bg-img-low-res.png) center /
+    cover no-repeat;
   --background-image: url(../images/light-bg-img.jpg) center / cover no-repeat;
 
   /* qr code wrapper background */
   --qr-w-background-color: var(--wz-light);
+
+  /* qr code image */
+  --qr-code-image: url(../images/light-qr-code.svg) center / cover no-repeat;
 
   /* text color */
   --text-primary: var(--wz-dark);
@@ -27,12 +32,19 @@
 }
 
 root-wz.dark {
-  --qr-bg-color: rgba(235, 199, 230);
+  --qr-bg-color: rgba(235, 199, 230, 0.8);
   /* --background-color: #645cbb; */
-  --qr-wrapper-bg: rgba(255, 255, 255, 0.2);
+  --qr-wrapper-bg: rgba(255, 255, 255, 0.16);
+
+  /* primary background image */
+  --background-image-low-res: url(../images/dark-bg-img-low-res.png) center /
+    cover no-repeat;
   --background-image: url(../images/dark-bg-img.jpg) center / cover no-repeat;
 
   /* text color */
   --text-primary: var(--wz-light);
   --text-secondary: #e5e5e5;
+
+  /* qr code image */
+  --qr-code-image: url(../images/dark-qr-code.svg) center / cover no-repeat;
 }
