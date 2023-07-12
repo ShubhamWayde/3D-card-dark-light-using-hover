@@ -68,7 +68,7 @@ footer {
   width: 100%;
   position: absolute;
   bottom: 0;
-  height: 5rem;
+  min-height: 5rem;
   margin-inline: auto;
   backdrop-filter: blur(2.5rem);
   border-top: 1px solid var(--qr-wrapper-bg);
@@ -76,8 +76,20 @@ footer {
 
 .attribution {
   color: var(--qr-bg-color);
-  width: 100%;
-  max-width: 60%;
+  flex-wrap: wrap;
+  gap: 1.5rem;
   justify-content: space-between;
   margin-inline: auto;
+  max-width: 60%;
+  width: 100%;
+}
+
+/* media query */
+
+@media screen and (max-width: 46em) {
+  .attribution {
+    justify-content: center;
+    margin-block: 1.5rem;
+    max-width: 90%;
+  }
 }

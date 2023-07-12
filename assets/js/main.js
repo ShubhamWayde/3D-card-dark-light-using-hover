@@ -23,11 +23,16 @@ function rotateElement(event, element) {
   element.style.setProperty("--rotateX", roundedY + "deg");
   element.style.setProperty("--rotateY", -roundedX + "deg");
 
+  const sensor = new Gyroscope();
+
+  sensor.start();
+  sensor.onreading = () => {
+    console.log(sensor.roundedX);
+  };
+
   //   console.log("this is X: " + roundedX, "this is Y: " + roundedY);
 }
 
 document.addEventListener("mousemove", (e) => {
   rotateElement(e, qrCodeWrapper);
 });
-
-// console.log(rootWz);
